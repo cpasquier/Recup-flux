@@ -67,7 +67,7 @@ tr_file.close()
 cntln=-1    #for counting the line we're at
 
 with open(str(d1)+'_flux-list.dat', 'w') as f:
-    f.write('Nominal x'+'\t'+'Scan'+'\t'+'Transmission'+'\t'+'Date-time'+'\t'+'Dev. x'+'\n')
+    f.write('Nominal x'+'\t'+'Scan'+'\t'+'Flux'+'\t'+'Date-time'+'\t'+'Dev. x'+'\n')
     for line in searchlines:
         cntln=cntln+1
         for scan_num in scanunfold:
@@ -112,6 +112,6 @@ for j in xlist:
     plt.plot(axis1,axis2,label='x='+str(j))
     plt.xticks(axis1)
 plt.xlabel("Scan number")
-plt.ylabel("Transmission")
+plt.ylabel("Flux")
 plt.legend()
 plt.show()
